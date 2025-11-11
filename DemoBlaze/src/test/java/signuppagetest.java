@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class signuppagetest extends basetest{
@@ -17,5 +18,12 @@ public class signuppagetest extends basetest{
 
     }
 
+    @Test
+    public void emptyvalidatesignupisinginvalidusernamevalidpasswrd() {
+        Signuppage.sign_up("    ", "1234###56789");
     }
+
+
+
+}
 
